@@ -1,0 +1,801 @@
+<!--
+	This file is a part of "Questionario Pari Opportunità Treviglio";
+	Copyright (c) 2018 The project Authors and Contributors (see AUTHORS and CONTRIBUTORS).
+	See LICENSE file for further details:
+	https://github.com/MarcoBuster/QuestionarioPariOpportunitaTreviglio/blob/master/LICENSE
+-->
+
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="google-signin-client_id" content="374969564716-2r4mhgagbi582qrsdn20m29ibg25dv42.apps.googleusercontent.com">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Questionario pari opportunità | Istituto Archimede</title>
+
+    <style>
+        .form-group {
+            padding-top: 12px;
+            margin-bottom: 0;
+        }
+        form h5 {
+            font-weight: normal;
+        }
+        form .table, form tr:last-child td {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .default-hide {
+            display: none;
+        }
+        .subtitle {
+            opacity: 0.7 !important;
+            color: white;
+        }
+        .container {
+            background: white;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container bg-primary text-white py-3 text-center">
+        <h2 class="mb-2">
+            Questionario pari opportunità
+        </h2>
+        <h3><i>Istituto Archimede</i></h3>
+    </div>
+
+    <div class="container h-100 bg-dark text-white py-2 text-center sticky-top">
+        <div class="row justify-content-center align-self-center text-center">
+            <div class="col">
+                <h4 class="mb-0 text-center"><i>Parte I</i></h4>
+                <span class="subtitle">Informazioni generali</span>
+            </div>
+        </div>
+    </div>
+
+    <form id="questionario">
+	    <div class="d-none">
+		    <textarea id="google_token_input" name="google_token" title=""></textarea>
+	    </div>
+
+
+        <div class="container pb-2">
+            <!-- 1. Sei uno studente dell'Istituto Archimede? -->
+            <div class="form-group">
+                <h5>1. <span class="question">Sei uno studente dell'Istituto Archimede?</span></h5>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1" id="q1a1" value="si" required>
+                    <label class="custom-control-label" for="q1a1">
+                        Sì
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1" id="q1a2" value="no">
+                    <label class="custom-control-label" for="q1a2">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <!-- [SE 1 == "Sì"]: 1.A1 Che classe frequenti? -->
+            <div class="form-group q2-1 default-hide">
+                <h5>1.1 <span class="question">Che classe frequenti?</span></h5>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="q1A_1" id="q1A_1a1" value="1a">
+                    <label class="custom-control-label" for="q1A_1a1">
+                        1&deg; superiore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="q1A_1" id="q1A_1a2" value="2a">
+                    <label class="custom-control-label" for="q1A_1a2">
+                        2&deg; superiore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="q1A_1" id="q1A_1a3" value="3a">
+                    <label class="custom-control-label" for="q1A_1a3">
+                        3&deg; superiore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="q1A_1" id="q1A_1a4" value="4a">
+                    <label class="custom-control-label" for="q1A_1a4">
+                        4&deg; superiore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="q1A_1" id="q1A_1a5" value="5a">
+                    <label class="custom-control-label" for="q1A_1a5">
+                        5&deg; superiore
+                    </label>
+                </div>
+            </div>
+
+            <!-- [SE 1 == "No"]: 1.B1 Quale è il tuo ruolo all'interno della scuola? -->
+            <div class="form-group q2-2 default-hide">
+                <h5>1.1 <span class="question">Quale è il tuo ruolo all'interno della scuola?</span></h5>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_1" id="q1B_1a1" value="professore">
+                    <label class="custom-control-label" for="q1B_1a1">
+                        Professore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_1" id="q1B_1a2" value="genitore">
+                    <label class="custom-control-label" for="q1B_1a2">
+                        Genitore
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_1" id="q1B_1a3" value="ata">
+                    <label class="custom-control-label" for="q1B_1a3">
+                        Personale ATA
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_1" id="q1B_1a4" value="altro">
+                    <label class="custom-control-label" for="q1B_1a4">
+                        Altro parente/conoscente di uno studente dell'Istituto Archimede
+                    </label>
+                </div>
+            </div>
+
+            <!-- [SE 1 == "No"]: 1.B2 Quale è la tua età? -->
+            <div class="form-group q2-3 default-hide">
+                <h5>1.2 <span class="question">Età</span></h5>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_2" id="q1B_2a1" value="14-16">
+                    <label class="custom-control-label" for="q1B_2a1">
+                        14-16
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_2" id="q1B_2a2" value="17-19">
+                    <label class="custom-control-label" for="q1B_2a2">
+                        17-19
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_2" id="q1B_2a3" value="20-30">
+                    <label class="custom-control-label" for="q1B_2a3">
+                        20-30
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_2" id="q1B_2a4" value="30-50">
+                    <label class="custom-control-label" for="q1B_2a4">
+                        30-50
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q1B_2" id="q1B_2a5" value="50+">
+                    <label class="custom-control-label" for="q1B_2a5">
+                        50+
+                    </label>
+                </div>
+            </div>
+
+            <!-- 2. Sesso -->
+            <div class="form-group">
+                <h5>2. <span class="question">Sesso</span></h5>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q2" id="q2_a1" value="maschio" required>
+                    <label class="custom-control-label" for="q2_a1">
+                        Maschio
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q2" id="q2_a2" value="femmina">
+                    <label class="custom-control-label" for="q2_a2">
+                        Femmina
+                    </label>
+                </div>
+            </div>
+
+            <!-- 3. Dove si trova il tuo paese di nascita e quello dei tuoi genitori? -->
+            <div class="form-group">
+                <h5>3. <span class="question">Dove si trova il tuo paese di nascita e quello dei tuoi genitori?</span></h5>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <th scope="row">Io</th>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a1" value="italia" required>
+                                    <label class="custom-control-label" for="q3A_a1">
+                                        Italia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a2" value="europa" required>
+                                    <label class="custom-control-label" for="q3A_a2">
+                                        Europa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a3" value="africa" required>
+                                    <label class="custom-control-label" for="q3A_a3">
+                                        Africa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a4" value="asia" required>
+                                    <label class="custom-control-label" for="q3A_a4">
+                                        Asia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a5" value="america" required>
+                                    <label class="custom-control-label" for="q3A_a5">
+                                        America
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_io" id="q3A_a6" value="australia" required>
+                                    <label class="custom-control-label" for="q3A_a6">
+                                        Australia
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Madre</th>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a1" value="italia" required>
+                                    <label class="custom-control-label" for="q3B_a1">
+                                        Italia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a2" value="europa">
+                                    <label class="custom-control-label" for="q3B_a2">
+                                        Europa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a3" value="africa">
+                                    <label class="custom-control-label" for="q3B_a3">
+                                        Africa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a4" value="asia">
+                                    <label class="custom-control-label" for="q3B_a4">
+                                        Asia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a5" value="america">
+                                    <label class="custom-control-label" for="q3B_a5">
+                                        America
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_madre" id="q3B_a6" value="australia" required>
+                                    <label class="custom-control-label" for="q3B_a6">
+                                        Australia
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Padre</th>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a1" value="italia">
+                                    <label class="custom-control-label" for="q3C_a1">
+                                        Italia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a2" value="europa">
+                                    <label class="custom-control-label" for="q3C_a2">
+                                        Europa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a3" value="africa">
+                                    <label class="custom-control-label" for="q3C_a3">
+                                        Africa
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a4" value="asia">
+                                    <label class="custom-control-label" for="q3C_a4">
+                                        Asia
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a5" value="america">
+                                    <label class="custom-control-label" for="q3C_a5">
+                                        America
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="q3_padre" id="q3C_a6" value="australia" required>
+                                    <label class="custom-control-label" for="q3C_a6">
+                                        Australia
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 4. Come consideresti la situazione economica della tua famiglia? -->
+            <div class="form-group">
+                <h5>4. <span class="question">Come consideresti la situazione economica della tua famiglia?</span></h5>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q4" id="q4_a1" value="bassa" required>
+                    <label class="custom-control-label" for="q4_a1">
+                        Bassa
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q4" id="q4_a2" value="media" required>
+                    <label class="custom-control-label" for="q4_a2">
+                        Media
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="q4" id="q4_a3" value="bassa" required>
+                    <label class="custom-control-label" for="q4_a3">
+                        Alta
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="container h-100 bg-dark text-white py-2 text-center sticky-top">
+            <div class="row justify-content-center align-self-center text-center">
+                <div class="col">
+                    <h4 class="mb-0 text-center"><i>Parte II</i></h4>
+                    <span class="subtitle">Cosa sono per te le pari opportunità?</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- 5. Se ti dico pari opportunità... qual è la prima parola che ti viene in mente? -->
+            <div class="form-group">
+                <h5>5. <span class="question">Se ti dico pari opportunità... quale è la prima parola che ti viene in mente?</span></h5>
+                <input class="form-control" type="text" maxlength="16" id="q5" name="q5" title="" required>
+            </div>
+
+            <!-- 6. Segna i tre argomenti che per te sono più importanti riguardo al tema
+                    delle pari opportunità (contrassegna con i numeri da 1 a 3)  -->
+            <div class="form-group q6">
+                <h5 class="mb-0">6. <span class="question">Segna i tre argomenti che per te sono più importanti riguardo al tema
+                    delle pari opportunità</span></h5>
+                <span style="margin-bottom: .5rem;">
+                    <i>Contrassegna con i numeri da 1 a 3</i>
+                </span>
+                <br />
+                <div class="form-check">
+                    <select id="q6_a1" name="q6_parita">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a1">Parità di genere</label>
+                </div>
+                <div class="form-check">
+                    <select class="" id="q6_a2" name="q6_disabilita">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a2">Disabilità</label>
+                </div>
+                <div class="form-check">
+                    <select class="" id="q6_a3" name="q6_lavoro">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a3">Lavoro</label>
+                </div>
+                <div class="form-check">
+                    <select class="" id="q6_a4" name="q6_istruzione">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a4">Istruzione</label>
+                </div>
+                <div class="form-check">
+                    <select class="" id="q6_a5" name="q6_orientamento-sessuale">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a5">Orientamento sessuale</label>
+                </div>
+                <div class="form-check">
+                    <select class="" id="q6_a6" name="q6_risorse-economiche">
+                        <option selected value="none">--</option>
+                        <option value="1">1&deg;</option>
+                        <option value="2">2&deg;</option>
+                        <option value="3">3&deg;</option>
+                    </select>
+                    <label for="q6_a6">Risorse economiche</label>
+                </div>
+            </div>
+
+            <!-- 7. Pensando alla tua esperienza personale segna,
+                    per ciascun ambito, come percepisci le pari opportunità nella tua vita -->
+            <div class="form-group">
+                <h5 class="mb-0">7.
+                    <span class="question">
+                        Pensando alla tua <b>esperienza personale</b> segna,
+                        per ciascun ambito: come percepisci le pari opportunità nella tua vita?
+                    </span>
+                </h5>
+                <span style="margin-bottom: .5rem;">
+                    <i>1: per nulla rispettate; 10: completamente rispettate</i>
+                </span>
+
+                <br />
+
+                <label for="q7_a1">Parità di genere: <b><span id="q7_a1n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_parita" min="1" max="10" value="5" id="q7_a1"
+                       oninput="$('#q7_a1n').text($('#q7_a1')[0].value);">
+
+                <label for="q7_a2">Disabilità: <b><span id="q7_a2n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_disabilita" min="1" max="10" value="5" id="q7_a2"
+                       oninput="$('#q7_a2n').text($('#q7_a2')[0].value);">
+
+                <label for="q7_a3">Lavoro: <b><span id="q7_a3n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_lavoro" min="1" max="10" value="5" id="q7_a3"
+                       oninput="$('#q7_a3n').text($('#q7_a3')[0].value);">
+
+                <label for="q7_a4">Istruzione: <b><span id="q7_a4n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_istruzione" min="1" max="10" value="5" id="q7_a4"
+                       oninput="$('#q7_a4n').text($('#q7_a4')[0].value);">
+
+                <label for="q7_a5">Orientamento sessuale: <b><span id="q7_a5n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_orientamento-sessuale" min="1" max="10" value="5" id="q7_a5"
+                       oninput="$('#q7_a5n').text($('#q7_a5')[0].value);">
+
+                <label for="q7_a6">Risorse economiche: <b><span id="q7_a6n">5</span></b></label>
+                <input type="range" class="custom-range" name="q7_risorse-economiche" min="1" max="10" value="5" id="q7_a6"
+                       oninput="$('#q7_a6n').text($('#q7_a6')[0].value);">
+            </div>
+
+            <!-- 8. Pensando all'esperienza della tua famiglia segna,
+                    per ciascun ambito, come percepisci le pari opportunità nella tua vita -->
+            <div class="form-group">
+                <h5 class="mb-0">8.
+                    <span class="question">
+                        Pensando all'<b>esperienza della tua famiglia</b> segna,
+                        per ciascun ambito: come percepisci le pari opportunità nella tua vita?
+                    </span>
+                </h5>
+                <span style="margin-bottom: .5rem;">
+                    <i>1: per nulla rispettate; 10: completamente rispettate</i>
+                </span>
+
+                <br />
+
+                <label for="q8_a1">Parità di genere: <b><span id="q8_a1n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_parita" min="1" max="10" value="5" id="q8_a1"
+                       oninput="$('#q8_a1n').text($('#q8_a1')[0].value);">
+
+                <label for="q8_a2">Disabilità: <b><span id="q8_a2n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_disabilita" min="1" max="10" value="5" id="q8_a2"
+                       oninput="$('#q8_a2n').text($('#q8_a2')[0].value);">
+
+                <label for="q8_a3">Lavoro: <b><span id="q8_a3n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_lavoro" min="1" max="10" value="5" id="q8_a3"
+                       oninput="$('#q8_a3n').text($('#q8_a3')[0].value);">
+
+                <label for="q8_a4">Istruzione: <b><span id="q8_a4n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_istruzione" min="1" max="10" value="5" id="q8_a4"
+                       oninput="$('#q8_a4n').text($('#q8_a4')[0].value);">
+
+                <label for="q8_a5">Orientamento sessuale: <b><span id="q8_a5n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_orientamento-sessuale" min="1" max="10" value="5" id="q8_a5"
+                       oninput="$('#q8_a5n').text($('#q8_a5')[0].value);">
+
+                <label for="q8_a6">Risorse economiche: <b><span id="q8_a6n">5</span></b></label>
+                <input type="range" class="custom-range" name="q8_risorse-economiche" min="1" max="10" value="5" id="q8_a6"
+                       oninput="$('#q8_a6n').text($('#q8_a6')[0].value);">
+            </div>
+
+            <!-- 9. In base alla tua esperienza sui social segna,
+                    per ciascun ambito, come percepisci le pari opportunità nella tua vita -->
+            <div class="form-group">
+                <h5 class="mb-0">9.
+                    <span class="question">
+                        In base alla tua esperienza sui <b>social</b> segna,
+                        per ciascun ambito: come percepisci le pari opportunità nella tua vita?
+                    </span>
+                </h5>
+                <span style="margin-bottom: .5rem;">
+                    <i>1: per nulla rispettate; 10: completamente rispettate</i>
+                </span>
+
+                <br />
+
+                <label for="q9_a1">Parità di genere: <b><span id="q9_a1n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_parita" min="1" max="10" value="5" id="q9_a1"
+                       oninput="$('#q9_a1n').text($('#q9_a1')[0].value);">
+
+                <label for="q9_a2">Disabilità: <b><span id="q9_a2n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_disabilita" min="1" max="10" value="5" id="q9_a2"
+                       oninput="$('#q9_a2n').text($('#q9_a2')[0].value);">
+
+                <label for="q9_a3">Lavoro: <b><span id="q9_a3n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_lavoro" min="1" max="10" value="5" id="q9_a3"
+                       oninput="$('#q9_a3n').text($('#q9_a3')[0].value);">
+
+                <label for="q9_a4">Istruzione: <b><span id="q9_a4n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_istruzione" min="1" max="10" value="5" id="q9_a4"
+                       oninput="$('#q9_a4n').text($('#q9_a4')[0].value);">
+
+                <label for="q9_a5">Orientamento sessuale: <b><span id="q9_a5n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_orientamento-sessuale" min="1" max="10" value="5" id="q9_a5"
+                       oninput="$('#q9_a5n').text($('#q9_a5')[0].value);">
+
+                <label for="q9_a6">Risorse economiche: <b><span id="q9_a6n">5</span></b></label>
+                <input type="range" class="custom-range" name="q9_risorse-economiche" min="1" max="10" value="5" id="q9_a6"
+                       oninput="$('#q9_a6n').text($('#q9_a6')[0].value);">
+            </div>
+
+            <!-- 10. Pensando alle pari opportunità, mettendo a confronto TV e social quale è lo strumento
+                 che percepisci più tutelante? -->
+            <div class="form-group">
+                <h5 class="mb-0">10.
+                    <span class="question">
+                        Pensando alle pari opportunità, mettendo a confronto TV e social quale è lo strumento
+                        che percepisci più tutelante?
+                    </span>
+                </h5>
+
+                <div class="row">
+                    <div class="col">
+                        Parità di genere
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_parita" id="q10A_a1"
+                                   value="tv">
+                            <label class="custom-control-label" for="q10A_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_parita" id="q10A_a2"
+                                   value="social">
+                            <label class="custom-control-label" for="q10A_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col">
+                        Disabilità
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_disabilita" id="q10B_a1"
+                                   value="tv">
+                            <label class="custom-control-label" for="q10B_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_disabilita" id="q10B_a2"
+                                   value="social">
+                            <label class="custom-control-label" for="q10B_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col">
+                        Lavoro
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_lavoro" id="q10C_a1" value="tv">
+                            <label class="custom-control-label" for="q10C_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_lavoro" id="q10C_a2"
+                                   value="social">
+                            <label class="custom-control-label" for="q10C_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col">
+                        Istruzione
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_istruzione" id="q10D_a1"
+                                   value="tv">
+                            <label class="custom-control-label" for="q10D_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_istruzione" id="q10D_a2"
+                                   value="social">
+                            <label class="custom-control-label" for="q10D_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col">
+                        Orientamento sessuale
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_orientamento-sessuale"
+                                   id="q10E_a1" value="tv">
+                            <label class="custom-control-label" for="q10E_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_orientamento-sessuale"
+                                   id="q10E_a2" value="social">
+                            <label class="custom-control-label" for="q10E_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col">
+                        Risorse economiche
+                        <br/>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_risorse-economiche" id="q10F_a1"
+                                   value="tv">
+                            <label class="custom-control-label" for="q10F_a1">TV</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" type="radio" name="q10_risorse-economiche" id="q10F_a2"
+                                   value="social">
+                            <label class="custom-control-label" for="q10F_a2">Social</label>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Cosa ritieni debba essere fatto da chi si occupa di pari opportunità oer contrastare le discriminazioni? -->
+            <div class="form-group">
+                <h5>11.
+                    <span class="question">Cosa ritieni debba essere fatto da chi si occupa di
+                        pari opportunità per contrastare le discriminazioni?</span>
+                </h5>
+                <textarea class="form-control" type="text" maxlength="1024" id="q11" name="q11" title=""></textarea>
+            </div>
+
+            <br /> <br /> <br />
+        </div>
+
+        <div class="container-fluid px-0 pt-4 fixed-bottom">
+            <button type="submit" class="btn btn-primary btn-lg rounded-0 w-100 m-0" id="submit">Invia</button>
+        </div>
+    </form>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/pooper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Form JavaScript -->
+    <script>
+        function show(element) {
+            $(element).show();
+            $(element + ' :input').prop('required', true);
+        }
+        function hide(element) {
+            $(element).hide();
+            $(element + ' :input').prop('required', false);
+        }
+
+        function onLoad() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init();
+            });
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+	        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            });
+        }
+
+        $(document).ready(function() {
+            // Set google token to hidden field
+	        $('#google_token_input').val(localStorage.getItem("google_id_token"));
+
+            // Question 1
+            $('input[name=q1]').change(function() {
+                let q1_answer = $('input[name=q1]:checked').val();
+                if (q1_answer === 'si') {
+                    show('.q2-1');
+                    hide('.q2-2');
+                    hide('.q2-3');
+                }
+                else {
+                    hide('.q2-1');
+                    show('.q2-2');
+                    show('.q2-3');
+                }
+            });
+
+            // Question 6
+            $('.q6 select').each(function() {
+                $(this).change(function(e) {
+                    let target = $(e.target)[0];
+                    $('.q6 select').each(function() {
+                        let el = $(this)[0];
+                        if (target.value === el.value && target !== el) {
+                            el.value = "none";
+                        }
+                    });
+                })
+            });
+
+            // Redirect to "thanks" page
+            $('#questionario').submit(function(e) {
+                e.preventDefault();
+                if (document.getElementById('questionario').checkValidity() === true) {
+                    $.ajax({
+                        url: '/questionario',
+                        type: 'post',
+                        dataType: 'json',
+                        data: $('#questionario').serialize(),
+                        error: function() {
+                            Console.error("Error!");
+                        },
+                    });
+                }
+                signOut();
+	            window.location.href = "/grazie";
+            });
+        });
+    </script>
+
+	<!-- Google Platform Library JavaScript -->
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+</body>
+</html>

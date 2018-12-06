@@ -1,0 +1,92 @@
+<!--
+	This file is a part of "Questionario Pari Opportunità Treviglio";
+	Copyright (c) 2018 The project Authors and Contributors (see AUTHORS and CONTRIBUTORS).
+	See LICENSE file for further details:
+	https://github.com/MarcoBuster/QuestionarioPariOpportunitaTreviglio/blob/master/LICENSE
+-->
+
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-client_id" content="374969564716-2r4mhgagbi582qrsdn20m29ibg25dv42.apps.googleusercontent.com">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Questionario pari opportunità | ARCHIMEDE</title>
+
+    <style>
+        .container {
+            background: white;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container bg-primary text-white py-3 text-center">
+        <h2 class="mb-2">
+            Questionario pari opportunità
+        </h2>
+        <h3><i>Istituto tecnico "Archimede"</i></h3>
+    </div>
+
+    <div class="container h-100 pb-3">
+        <div class="jumbotron-fluid">
+            <div class="text-center">
+                <div class="display-4 pt-2">
+                    Login
+                </div>
+                <p class="lead mb-2">Esegui il login per autenticare il questionario. <br />
+                    Ricordiamo che il questionario è <b>anonimo</b> al 100%.</p>
+                <div class="g-signin2" data-onsuccess="onSignIn" align="center"></div>
+            </div>
+
+            <hr class="mt-3 mb-4" />
+
+            <div class="row pb-4">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="img-fluid" src="images/commissione-pari-opportunita.jpg" />
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-0">
+                            <img class="img-fluid" src="images/archimede.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img class="img-fluid" src="images/citta-treviglio.jpg" />
+                        </div>
+                        <div class="col-sm-6 mt-2 mt-sm-0">
+                            <img class="img-fluid" src="images/sistema-sanitario-asst-bergamo-ovest.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	    <hr />
+
+	    <a href="/privacy">Privacy Policy</a>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/pooper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function onSignIn(googleUser) {
+            let id_token = googleUser.getAuthResponse().id_token;
+            localStorage.setItem("google_id_token", id_token);
+            window.location.href = "/questionario";
+        }
+    </script>
+
+	<!-- Google Platform Library JavaScript -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
